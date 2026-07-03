@@ -411,7 +411,7 @@ const xiaoniaozhuoCaseSections = [
     id: 'packaging',
     title: '箱型结构与落地规格',
     image: '/assets/xiaoniaozhuo/xiaoniaozhuo-packaging.jpg',
-    text: '通过运输箱、礼盒 A、礼盒 B 和刀模展开呈现真实落地能力，让作品集访客能看到包装从概念到生产规格的完整链条。',
+    text: '通过运输箱、礼盒 A、礼盒 B 和刀模展开呈现真实落地能力，能看到包装从概念到生产规格的完整链条。',
     tags: ['箱型结构', '礼盒规格', '落地物料'],
   },
 ];
@@ -1965,7 +1965,7 @@ function XiaoniaozhuoPortfolio({ sections, panelId, labelledBy }) {
           <span>Core Idea</span>
           <h5>小鸟啄后的苹果</h5>
           <p>
-            以小鸟、果树和采摘人物建立品牌故事，把“自然发生的痕迹”变成包装识别点。绿色只作为项目色出现，页面仍服从张浩宇作品集的暗色展陈系统。
+            以小鸟、果树和采摘人物建立品牌故事，把“自然发生的痕迹”变成包装识别点。
           </p>
           <div className="xiaoniaozhuo-proof-grid">
             {['地域农产品价值', '插画化生产过程', '包装盒型落地', '品牌亲和力表达'].map((item) => (
