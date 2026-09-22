@@ -86,18 +86,7 @@ const stats = [
   { value: 'AI+', label: 'AIGC 工作流实践' },
 ];
 
-const videoLibraryItems = [
-  {
-    id: 'video-slot-01',
-    poster: '/assets/videos/death-stranding-2-cover.png',
-    videoSrc: '/assets/videos/death-stranding-2-on-the-beach.mp4',
-    title: 'DEATH STRANDING 2: ON THE BEACH',
-    date: '',
-    tags: [],
-    description:
-      '以死亡搁浅周边雨伞为故事主线的产品宣传CG，故事发生在虚空噬灭的早期，一个少年拿到了一把能对抗命运的雨伞，但他会回来吗？',
-    duration: '',
-  },
+const videoItems = [
   {
     id: 'video-slot-02',
     poster: '/assets/videos/heineken-cowboy-commercial-mv-cover.webp',
@@ -108,16 +97,6 @@ const videoLibraryItems = [
     description:
       '他们说，别在日落后运啤酒穿过荒漠。可那天，火车还是来了。车上装满喜力啤酒，车外是风、沙，还有 Professor-E。他从山脊冲下来，像一颗喝过酒的子弹。马蹄贴着铁轨，枪声打在节拍上，整列火车在夕阳里发抖。等人们反应过来，货厢门已经开了，啤酒桶滚进尘土，Professor-Z 和一群疯子消失在西边。',
     duration: '01:33',
-  },
-  {
-    id: 'video-slot-03',
-    poster: '/assets/videos/skeleton-2026ss-cover.webp',
-    videoSrc: '/assets/videos/skeleton-2026ss.mp4',
-    title: 'SKELETON 2026SS',
-    date: '2026',
-    tags: ['Fashion Film', 'CRT Glitch', 'Skeleton System'],
-    description: '以骨骼、电视噪点和故障色散构成 2026SS 服装影像，强调暗场质感和视觉冲击。',
-    duration: '01:04',
   },
   {
     id: 'video-slot-04',
@@ -131,14 +110,14 @@ const videoLibraryItems = [
     duration: '00:32',
   },
   {
-    id: 'video-slot-05',
-    poster: '/assets/videos/neon-alley-gunfight-cover.webp',
-    videoSrc: '/assets/videos/neon-alley-gunfight.mp4',
-    title: 'NEON ALLEY GUNFIGHT',
+    id: 'video-slot-03',
+    poster: '/assets/videos/skeleton-2026ss-cover.webp',
+    videoSrc: '/assets/videos/skeleton-2026ss.mp4',
+    title: 'SKELETON 2026SS',
     date: '2026',
-    tags: ['Cyberpunk Action', 'AIGC Video', 'Comic Motion'],
-    description: '以蓝红霓虹巷战、机械角色和漫画线稿质感，完成一支赛博动作影像测试。',
-    duration: '00:21',
+    tags: ['Fashion Film', 'CRT Glitch', 'Skeleton System'],
+    description: '以骨骼、电视噪点和故障色散构成 2026SS 服装影像，强调暗场质感和视觉冲击。',
+    duration: '01:04',
   },
   {
     id: 'video-slot-06',
@@ -151,15 +130,6 @@ const videoLibraryItems = [
     duration: '00:15',
   },
 ];
-
-const videoItems = [
-  videoLibraryItems[0],
-  videoLibraryItems[1],
-  videoLibraryItems[3],
-  videoLibraryItems[4],
-  videoLibraryItems[2],
-  videoLibraryItems[5],
-].filter(Boolean);
 
 const guitarTunerProcessSections = [
   {
