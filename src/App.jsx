@@ -110,16 +110,6 @@ const videoItems = [
     duration: '00:32',
   },
   {
-    id: 'video-slot-03',
-    poster: '/assets/videos/skeleton-2026ss-cover.webp',
-    videoSrc: '/assets/videos/skeleton-2026ss.mp4',
-    title: 'SKELETON 2026SS',
-    date: '2026',
-    tags: ['Fashion Film', 'CRT Glitch', 'Skeleton System'],
-    description: '以骨骼、电视噪点和故障色散构成 2026SS 服装影像，强调暗场质感和视觉冲击。',
-    duration: '01:04',
-  },
-  {
     id: 'video-slot-06',
     poster: '/assets/videos/e-ren-cultural-creative-cover.webp',
     videoSrc: '/assets/videos/e-ren-cultural-creative.mp4',
