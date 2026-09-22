@@ -88,6 +88,72 @@ const stats = [
 
 const videoItems = [
   {
+    id: 'black-sunfor73',
+    poster: '/assets/videos/black-sunfor73-20260922-cover.webp',
+    videoSrc: '/assets/videos/black-sunfor73-20260922.mp4',
+    title: 'BLACK SUNFOR73',
+    date: '2026',
+    tags: ['Historical Drama', 'AIGC Short Film'],
+    description:
+      '勿忘国耻，铭记历史。日军细菌战的受害者、战场上牺牲的远征军，都是不应被遗忘的生命。时间可以过去，伤痛却不会自行消散；那些未能归来的人，仍在等待正式的道歉与应有的追责。',
+    duration: '03:14',
+  },
+  {
+    id: 'time-stop-delivery',
+    poster: '/assets/videos/time-stop-delivery-20260922-cover.webp',
+    videoSrc: '/assets/videos/time-stop-delivery-20260922.mp4',
+    title: '时停外卖',
+    date: '2026',
+    tags: ['Urban Fantasy', 'AIGC Short Film'],
+    description:
+      '取餐、等电梯、过路口，每个环节都在挤压配送时间。和时间赛跑，渐渐成了骑手的本能。可如果生活真的能按下暂停键，谁还愿意一直被倒计时追着跑？',
+    duration: '02:25',
+  },
+  {
+    id: 'i-hate-my-mom',
+    poster: '/assets/videos/i-hate-my-mom-20260922-cover.webp',
+    videoSrc: '/assets/videos/i-hate-my-mom-20260922.mp4',
+    title: '我讨厌我妈妈',
+    date: '2026',
+    tags: ['Family Drama', 'AIGC Short Film'],
+    description:
+      '你对妈妈说过最难听的话是什么？有些话脱口而出，却要很多年才懂得它的重量。直到命运让我们隔着时空重逢，我才发现，母亲的爱始终没有走远。',
+    duration: '04:16',
+  },
+  {
+    id: 'heart-flutter',
+    poster: '/assets/videos/heart-flutter-20260922-cover.webp',
+    videoSrc: '/assets/videos/heart-flutter-20260922.mp4',
+    title: '心动瞬间',
+    date: '2026',
+    tags: ['Romance', 'AIGC Short Film'],
+    description:
+      '你也有过对陌生人一瞬间心动的经历吗？世界那么大，大到一个平静的下午，就足以让两个人擦肩而过。可比遇见你更幸福的，是我又遇见了你。',
+    duration: '00:52',
+  },
+  {
+    id: 'freshman-days',
+    poster: '/assets/videos/freshman-days-20260922-cover.webp',
+    videoSrc: '/assets/videos/freshman-days-20260922.mp4',
+    title: '新手开学啦',
+    date: '2026',
+    tags: ['Campus Comedy', 'AIGC Short Film'],
+    description:
+      '第一次入学，本以为只是普通的宿舍生活，没想到室友个个都是深藏不露的神人。一个懵懂的新生，就这样误打误撞成了团宠，开启热闹又离谱的校园日常。',
+    duration: '01:56',
+  },
+  {
+    id: 'subway-seat-battle',
+    poster: '/assets/videos/subway-seat-battle-20260922-cover.webp',
+    videoSrc: '/assets/videos/subway-seat-battle-20260922.mp4',
+    title: '地铁抢座大法',
+    date: '2026',
+    tags: ['Urban Comedy', 'AIGC Short Film'],
+    description:
+      '硬刚别怂，以其人之道，还治其人之身。地铁里的一场抢座暗战，遇上不讲道理的人，就用他的方式还回去。这一回，轮到对方坐立不安。',
+    duration: '00:31',
+  },
+  {
     id: 'video-slot-02',
     poster: '/assets/videos/heineken-cowboy-commercial-mv-cover.webp',
     videoSrc: '/assets/videos/heineken-cowboy-commercial-mv.mp4',

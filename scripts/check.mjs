@@ -168,7 +168,9 @@ function measureBundle() {
 function measurePublishedAssets() {
   const { assets, missing } = validatePublishedAssets({ root });
   const missingInDist = [];
+  const oversized = [];
   let totalBytes = 0;
+  let videoBytes = 0;
 
   for (const asset of assets) {
     const distAsset = path.join(root, 'dist', asset);
@@ -178,10 +180,13 @@ function measurePublishedAssets() {
       continue;
     }
 
-    totalBytes += fs.statSync(distAsset).size;
+    const bytes = fs.statSync(distAsset).size;
+    totalBytes += bytes;
+    if (/\.(mp4|webm|mov|m4v)$/i.test(asset)) videoBytes += bytes;
+    if (bytes > 25 * 1024 * 1024) oversized.push(`${asset}: ${formatBytes(bytes)}`);
   }
 
-  return { assets, missing, missingInDist, totalBytes };
+  return { assets, missing, missingInDist, totalBytes, videoBytes, oversized };
 }
 
 function formatSize(bytes) {
@@ -204,6 +209,7 @@ try {
   );
   published.missing.forEach((item) => console.log(`missing published source: ${item}`));
   published.missingInDist.forEach((item) => console.log(`missing published dist asset: ${item}`));
+  console.log(`video payload=${formatBytes(published.videoBytes)}, other assets=${formatBytes(published.totalBytes - published.videoBytes)}`);
 
   logStep('optimized image map');
   const optimized = scanOptimizedImages();
@@ -233,8 +239,18 @@ try {
     throw new Error(`total JS gzip budget exceeded: ${formatSize(totalJs)} > 180.00 kB`);
   }
 
-  if (published.totalBytes > 35 * 1024 * 1024) {
-    throw new Error(`published asset payload exceeded: ${formatBytes(published.totalBytes)} > 35.00 MB`);
+  if (published.oversized.length) {
+    throw new Error(`Cloudflare Pages 25 MiB per-file limit exceeded: ${published.oversized.join(', ')}`);
+  }
+
+  // Full films load only when their player opens; retain a separate image/resource budget.
+  const nonVideoBytes = published.totalBytes - published.videoBytes;
+  if (nonVideoBytes > 35 * 1024 * 1024) {
+    throw new Error(`non-video asset payload exceeded: ${formatBytes(nonVideoBytes)} > 35.00 MB`);
+  }
+
+  if (published.totalBytes > 150 * 1024 * 1024) {
+    throw new Error(`published asset payload exceeded: ${formatBytes(published.totalBytes)} > 150.00 MB`);
   }
 
   if (
