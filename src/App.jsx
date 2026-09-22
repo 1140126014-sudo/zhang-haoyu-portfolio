@@ -91,7 +91,7 @@ const videoItems = [
     id: 'black-sunfor73',
     poster: '/assets/videos/black-sunfor73-20260922-cover.webp',
     videoSrc: '/assets/videos/black-sunfor73-20260922.mp4',
-    title: 'BLACK SUNFOR731',
+    title: 'BLACK SUN FOR731',
     date: '2026',
     tags: ['Historical Drama', 'AIGC Short Film'],
     description:
